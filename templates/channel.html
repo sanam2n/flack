@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}
+	Channel: {{channel_name}}
+{% endblock %}
+
+{% block body %}
+<link href="/static/channel_styling.css" rel="stylesheet">
+<script src="/static/channel_script.js"></script>
+
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
+<a href="/"><button class="btn btn-dark" id="back_home">Back Home</button></a>
+
+<div class="container">
+	<span id="available_chatter">
+		<br>
+		<div>
+			<h4 class="channel_label">Channel: <span id="channel_tag">{{channel_name}}</span></h4>
+		</div>
+		<div class="chat_box" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+			<div id="chatter_box" class="text-break">
+				<div class="container">
+					{% if channel_stored_chat_HTML %}
+						{% for alpha in range(channel_stored_chat_HTML|length) %}
+							
+								<div class="card">
+									<label for="message_text_card">@{{channel_stored_chat_HTML[alpha][0].username}}</label>
+									<pre id="message_text_card" class="text-break card-text">{{channel_stored_chat_HTML[alpha][0].message}}</pre>
+									<span class="time-left text-muted">{{channel_stored_chat_HTML[alpha][0].timestamp}}</span>
+								</div>
+
+						{% endfor %}
+					{% else %}
+
+						<div class="card">
+							<label for="message_text_card">@BOT</label>
+							<pre id="message_text_card" class="text-break card-text text-muted">Be the first to send a message. Remember not to share sensitive information. Thank You for using Chatter</pre>
+							<span class="time-left text-muted">Bot log</span>
+						</div>
+					
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<h6>Your Handle: <span id="username_1"></span></h6>
+		<form>
+			<div class="input_fields form-inline">
+				<input type="text" autocomplete="off" autofocus placeholder="Type a message..." id="message_text" class="form-control">
+			</div>
+			<button class="btn btn-dark" id="send_msg">Send</button>
+			<h6>Tip: Need a friend? Use our BOT. Type: '@BOT -help'</h6>
+		</form>
+	</span>
+</div>
+{% endblock %}

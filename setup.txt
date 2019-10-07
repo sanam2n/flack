@@ -1,0 +1,4 @@
+set FLASK_APP=application.py
+set FLASK_ENV=development
+set FLASK_DEBUG=1
+set SECRET_KEY=klhakhgkjdfhglfkmkw3kl4jh54l3jkb234kn

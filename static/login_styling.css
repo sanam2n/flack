@@ -1,0 +1,89 @@
+/* Styling for Index page */
+.send_button {
+  background-color: aqua; }
+
+.send_button:hover {
+  background-color: #00ff6a; }
+
+#create_channel {
+  background-color: rgba(0, 0, 0, 0.075);
+  color: palevioletred;
+  border-color: palevioletred; }
+
+#create_channel:hover {
+  background-color: rgba(0, 0, 0, 0.637);
+  color: palevioletred;
+  border-color: palevioletred; }
+
+.refresh {
+  background-color: rgba(51, 0, 75, 0.61);
+  color: #ffd000;
+  border-color: #ffd000; }
+
+.refresh:hover {
+  background-color: #33004b;
+  color: #ffd000;
+  border-color: #ffd000; }
+
+#channel_name {
+  color: black;
+  font-weight: bold;
+  font-family: 'Nova Flat';
+  font-size: 150%; }
+
+#available_channel {
+  font-weight: bold;
+  font-family: 'Gruppo';
+  font-size: 150%; }
+
+#input_field_channel {
+  width: 40%;
+  background-color: rgba(187, 187, 187, 0.623);
+  color: black; }
+
+#input_field_channel:focus {
+  background-color: rgba(214, 214, 214, 0.623);
+  outline: none;
+  border: 1px solid rgba(255, 153, 0, 0.623);
+  /* create a BIG glow */
+  box-shadow: 0px 0px 0px rgba(255, 153, 0, 0.623);
+  -moz-box-shadow: 0px 0px 0px rgba(255, 153, 0, 0.623);
+  -webkit-box-shadow: 0px 0px 0px rgba(255, 153, 0, 0.623); }
+
+#loading_gif_style {
+  width: 5%; }
+
+.log_box {
+  padding-top: 6%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 0%;
+  margin-right: 30%;
+  margin-left: 30%;
+  background-color: rgba(0, 0, 0, 0.712); }
+
+.log_box h4, .log_box p {
+  color: white; }
+
+.log_box button {
+  margin-top: 5%; }
+
+/*
+@media screen and (max-width: 600px) {
+	.log_box {
+		padding-top: 6%;
+		padding-bottom: 5%;
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-top: 20%;
+		margin-right: 5%;
+		margin-left: 5%;
+		background-color: rgba(0, 0, 0, 0.712);
+	}
+	#loading_gif_style {
+		width: 20%;
+	}
+} */
+
+/*# sourceMappingURL=login_styling.css.map */

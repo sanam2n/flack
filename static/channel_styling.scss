@@ -1,0 +1,67 @@
+/* Styling for Channel chats */
+
+.chat_box {
+	margin-left: 1%;
+	margin-right: 1%;
+	height: 500px;
+	overflow-y: scroll;
+	background-color: rgb(143, 249, 255);
+	border-color: brown;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.channel_label {
+	margin-top: -6%;
+}
+
+#message_text {
+	width: 60%;
+}
+
+.card {
+	margin-top: 1%;
+	margin-right: 0%;
+	margin-bottom: 1%;
+	background-color: rgb(255, 255, 255);
+
+	label {
+		margin-left: 1%;
+		font-family: "Gruppo";
+		font-weight: bold;
+		font-size: 120%;
+	}
+
+	.time-left {
+		margin-left: 1%;
+	}
+
+	.card-text {
+		margin-left: 2%;
+		padding-right: 1%;
+		font-family: 'Didact Gothic';
+		font-weight: bold;
+	}
+	pre {
+		overflow-x: auto;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
+	}
+}
+
+form {
+	.btn {
+		margin-top: 1%;
+	}
+}
+
+body {
+	background-color: rgb(204, 204, 204);
+}
+
+#back_home {
+	margin-top: 1%;
+	margin-left: 1%;
+}

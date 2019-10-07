@@ -1,0 +1,53 @@
+<!-- Used for the layout of the Webdite -->
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- some of the animation icon is provided by loading.io -->
+
+		<!-- The little icon on the browser -->
+		<link href="/static/app_icon/chatter_icon.png" rel="shortcut icon" type="image/png"/>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		<!-- jQuery, socketio -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<!-- Get own layout Javascript, CSS & Custom fonts -->
+		<script src="/static/layout_script.js"></script>
+		<link href="/static/layout_styling.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<div class="av_channel">
+			<h4>Channels: {{channel_name}}</h4>
+			<span id="login_logout_btn"><a href="#" onclick="logout_btn()">Logout</a></span><br>
+			
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-dark create_new_channel" onclick="create_new_channel()">
+				Create Channel
+			</button>
+			<span id="create_new_channel_field"></span>
+
+			{% if channel_list %}
+				{% for alpha in range(channel_list|length) %}
+					<a href="/c/{{channel_list[alpha]}}"><button class="channel_btn_list">{{channel_list[alpha]}}</button></a>
+				{% endfor %}
+			{% endif %}
+		</div>
+		
+
+		<main>
+			{% block main %} {% endblock %}
+		</main>
+	</body>
+</html>
