@@ -109,6 +109,9 @@ def create_channel(channel):
 @socketio.on("chatter")
 def message_sender(data):
 	"""Receive messages and send to the appropriate channel"""
+	print()
+	print(data)
+	print()
 
 	# Get the current time from the server
 	time_msg = time.localtime()
