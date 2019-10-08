@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (!localStorage.getItem("username")) {
 
 		// Send user to login page
-		if (location.href != location.protocol + "//" + document.domain + ":" + location.port + "/login") { // Prevents infinite reloading
+		if (location.pathname != "/login") { // Prevents infinite reloading
 			location.replace("/login");
 		}
 
