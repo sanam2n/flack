@@ -2,7 +2,6 @@
 
 import os
 import time
-import requests
 
 from flask import Flask, request, render_template, redirect, flash, jsonify
 from flask_socketio import SocketIO, emit
