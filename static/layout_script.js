@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		// Show input field for new channel creation
 		create_new_channel = () => {
-			document.querySelector("#create_new_channel_field").innerHTML = "<form method='POST'> <input type='text' nane='new_channel_name' id='new_channel_name' class='form-control' minlength='1' placeholder='Enter channel name' maxlength='8'/> </form> <span id='btn_load'> <button onclick='create_channel()' type='submit' class='btn btn-success'>Create</button> <button onclick='cancel_create_channel()' class='btn btn-danger'>Cancel</button> </span>";
+			document.querySelector("#create_new_channel_field").innerHTML = "<form method='POST'> <input type='text' nane='new_channel_name' id='new_channel_name' class='form-control' minlength='1' placeholder='Enter channel name' maxlength='8'/> <span id='btn_load'> <button onclick='create_channel()' type='submit' class='btn btn-success'>Create</button> <button onclick='cancel_create_channel()' class='btn btn-danger'>Cancel</button> </span> </form>";
 		}
 
 		// Create new channel and also check if they can use the requested name
