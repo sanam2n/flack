@@ -1,1 +1,1 @@
-web gunicorn --worker-class -w 1 application:app && pip install -r requirements.txt
+web gunicorn -w 1 application:app && pip install -r requirements.txt
