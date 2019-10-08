@@ -34,16 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		// Timeout variable for processing channel
 		var process_channel_timeout;
-
+		
 		// Make sure user is not on the login page and send them back
-		if (location.href == location.protocol + "//" + document.domain + ":" + location.port + "/login") { // Prevents infinite reloading
+		if (location.pathname != "/login") { // Prevents infinite reloading
+			alert("CURRENT LOCATION: "+location.pathname);
+			alert("RETURNING TO: "+localStorage.getItem("last_channel_visited"));
 			// Check if the user has any last visited channels and direct them to it
 			if (localStorage.getItem("last_channel_visited")) {
-				alert("Returning to last visited channel...")
-				location.replace(localStorage.getItem("last_channel_visited"));
-			} else {
-				alert("Sending to General")
-				location.replace("/c/General");
+				if (location.pathname != localStorage.getItem("last_channel_visited")) {
+					location.replace(localStorage.getItem("last_channel_visited"));
+				}
 			}
 		}
 
@@ -92,6 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					setTimeout(() => {
 						// Clear the HTML element(PAGE) of new channel field creation
 						document.querySelector("#create_new_channel_field").innerHTML = "";
+
+						// Change the last channel visited to the new created channel
+						localStorage.setItem("last_channel_visited", parameters["new_channel_name"]);
+
+						// Send the user to the new created channel
 						location.replace("/c/"+parameters["new_channel_name"]);
 					}, 4000);
 				
@@ -127,8 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Establishing connection with server
 		var socket = io.connect(location.protocol + "//" + document.domain + ":" + location.port);
 
-		// Record the last channel the user was in
-		localStorage.setItem("last_channel_visited", location.href)
+		// Change the last channel visited when pressing to join a channel
+		document.querySelectorAll(".channel_btn_list").forEach( button => {
+			button.onclick = () => {
+				localStorage.setItem("last_channel_visited", button.dataset.channel);
+			}
+		});
 
 		// Send the chat box to scroll automatically to the latest message
 		var element = document.querySelector("html");

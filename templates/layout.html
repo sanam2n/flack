@@ -40,7 +40,7 @@
 
 			{% if channel_list %}
 				{% for alpha in range(channel_list|length) %}
-					<a href="/c/{{channel_list[alpha]}}"><button class="channel_btn_list">{{channel_list[alpha]}}</button></a>
+					<a href="/c/{{channel_list[alpha]}}"><button class="channel_btn_list" data-channel="/c/{{channel_list[alpha]}}">{{channel_list[alpha]}}</button></a>
 				{% endfor %}
 			{% endif %}
 		</div>

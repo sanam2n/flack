@@ -10,7 +10,7 @@ from flask_socketio import SocketIO, emit
 from chat_bot import bot
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "klhakhgkjdfhglfkmkw3kl4jh54l3jkb234kn"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 socketio = SocketIO(app)
 
 system_data = {"channel_names": ['General']}
@@ -109,9 +109,6 @@ def create_channel(channel):
 @socketio.on("chatter")
 def message_sender(data):
 	"""Receive messages and send to the appropriate channel"""
-	print()
-	print(data)
-	print()
 
 	# Get the current time from the server
 	time_msg = time.localtime()
