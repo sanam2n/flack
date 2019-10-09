@@ -50,6 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Controls what the login or logout link does
 		document.querySelector("#login_logout_btn").innerHTML = "<a href='#' onclick='logout_btn()'>Logout</a>";
 
+		// Show the username on the HTML page
+		document.querySelector("#username_show").innerHTML = localStorage.getItem("username");
+
 		// Remove the username from LocalStorage
 		logout_btn = () => {
 			localStorage.removeItem("username");

@@ -1,11 +1,4 @@
 /* Styling for the Layout */
-.navbar {
-  position: fixed;
-  color: white;
-  background-color: black;
-  margin-left: 15%;
-  width: 100%; }
-
 a {
   font-family: 'Dekko';
   font-size: 130%; }
@@ -16,15 +9,6 @@ a {
 .app_title {
   margin-left: -80%; }
 
-@media screen and (max-width: 900px) {
-  .app_title {
-    margin-left: -70%; } }
-@media screen and (max-width: 900px) and (max-width: 600px) {
-  .logo {
-    width: 10%; }
-
-  .app_title {
-    margin-left: 0%; } }
 .av_channel {
   position: fixed;
   display: block;
@@ -106,5 +90,98 @@ a {
     padding-right: 1%; }
   .form_inputs h6 {
     color: white; }
+
+@media screen and (max-width: 400px) {
+  a {
+    font-family: 'Dekko';
+    font-size: 130%; }
+
+  .logo {
+    width: 3%; }
+
+  .app_title {
+    margin-left: -80%; }
+
+  .av_channel {
+    position: fixed;
+    display: block;
+    background-color: black;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    padding-left: 1%;
+    padding-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 35%;
+    height: 100%; }
+    .av_channel .channel_btn_list {
+      width: 95%;
+      margin-top: 1%;
+      border: none;
+      background-color: rgba(255, 166, 0, 0.673);
+      font-weight: bold;
+      font-family: 'Nova Flat';
+      font-size: 110%; }
+    .av_channel .create_new_channel {
+      margin-bottom: 2%; }
+    .av_channel #new_channel_name {
+      margin-bottom: 2%; }
+
+  .chat_box {
+    margin-top: -1.5%;
+    margin-left: 32%;
+    margin-right: 0%;
+    margin-bottom: 28%; }
+    .chat_box .card_box_chat {
+      margin-top: 1%;
+      margin-right: 0%;
+      margin-bottom: 1%;
+      background-color: white; }
+      .chat_box .card_box_chat label {
+        margin-left: 1%;
+        font-family: "Gruppo";
+        font-weight: bold;
+        font-size: 120%; }
+      .chat_box .card_box_chat .time-left {
+        margin-left: 1%; }
+      .chat_box .card_box_chat .card-text {
+        margin-left: 2%;
+        padding-right: 1%;
+        font-family: 'Didact Gothic';
+        font-weight: bold; }
+      .chat_box .card_box_chat pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word; }
+
+  .form_inputs {
+    display: block;
+    padding-bottom: 1%;
+    padding-left: 35.5%;
+    background-color: black;
+    width: 100%;
+    bottom: 0%;
+    position: fixed; }
+    .form_inputs .input_fields {
+      padding-top: 0.5%;
+      width: 89%;
+      height: 50%; }
+      .form_inputs .input_fields #message_text {
+        width: 90%; }
+    .form_inputs #send_msg {
+      color: red;
+      position: absolute;
+      margin-left: 52%;
+      margin-top: -9%;
+      height: 35.5%;
+      width: 13%; }
+    .form_inputs h6 {
+      color: white; } }
 
 /*# sourceMappingURL=layout_styling.css.map */

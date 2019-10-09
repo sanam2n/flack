@@ -30,6 +30,7 @@
 	<body>
 		<div class="av_channel">
 			<h4>Channels: {{channel_name}}</h4>
+			<h6>Username: <span id="username_show">{{channel_name}}</span></h6>
 			<span id="login_logout_btn"><a href="#" onclick="logout_btn()">Logout</a></span><br>
 			
 			<!-- Button trigger modal -->
@@ -40,7 +41,7 @@
 
 			{% if channel_list %}
 				{% for alpha in range(channel_list|length) %}
-					<a href="/c/{{channel_list[alpha]}}"><button class="channel_btn_list" data-channel="/c/{{channel_list[alpha]}}">{{channel_list[alpha]}}</button></a>
+					<a href="/c/{{channel_list[alpha]}}"><button class="channel_btn_list text-break" data-channel="/c/{{channel_list[alpha]}}">{{channel_list[alpha]}}</button></a>
 				{% endfor %}
 			{% endif %}
 		</div>
