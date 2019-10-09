@@ -91,7 +91,7 @@ a {
   .form_inputs h6 {
     color: white; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   a {
     font-family: 'Dekko';
     font-size: 130%; }
