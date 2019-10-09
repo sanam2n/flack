@@ -56,7 +56,8 @@ a {
 .chat_box {
   margin-top: -1.5%;
   margin-left: 4%;
-  margin-right: 0%; }
+  margin-right: 0%;
+  margin-bottom: 6%; }
   .chat_box .card_box_chat {
     margin-top: 1%;
     margin-right: 0%;
@@ -89,7 +90,7 @@ a {
   background-color: black;
   width: 100%;
   bottom: 0%;
-  position: absolute; }
+  position: fixed; }
   .form_inputs .input_fields {
     padding-top: 0.5%;
     width: 89%;
