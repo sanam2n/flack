@@ -20,7 +20,7 @@
 						{% for alpha in range(channel_stored_chat_HTML|length) %}
 							
 								<div class="card card_box_chat">
-									<label for="message_text_card">@{{channel_stored_chat_HTML[alpha][0].username}}</label>
+									<label for="message_text_card" id="check_users_msg">@{{channel_stored_chat_HTML[alpha][0].username}}</label>
 									<pre id="message_text_card" class="text-break card-text">{{channel_stored_chat_HTML[alpha][0].message}}</pre>
 									<span class="time-left text-muted">{{channel_stored_chat_HTML[alpha][0].timestamp}}</span>
 								</div>

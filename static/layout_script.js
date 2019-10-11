@@ -172,13 +172,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		socket.on(channel_name, data => {
 			const chatter_card = document.createElement("div");
 
-			chatter_card.innerHTML = "<div class='container'> \
-												<div class='card card_box_chat'> \
+			if (data.username_1 == localStorage.getItem("username")) {
+				chatter_card.innerHTML = "<div class='container'> \
+												<div class='card card_box_chat users_msg'> \
 													<label for='message_text_card'>@"+data.username_1+"</label> \
 													<pre id='message_text_card' class='text-break card-text'>"+data.msg+"</pre> \
 													<span class='time-left text-muted'>"+data.timestamp+"</span> \
 												</div> \
 											</div>";
+			} else {
+				chatter_card.innerHTML = "<div class='container'> \
+												<div class='card card_box_chat not_users_msg'> \
+													<label for='message_text_card'>@"+data.username_1+"</label> \
+													<pre id='message_text_card' class='text-break card-text'>"+data.msg+"</pre> \
+													<span class='time-left text-muted'>"+data.timestamp+"</span> \
+												</div> \
+											</div>";
+			}
+
 			document.querySelector("#chatter_box").append(chatter_card);
 			var element = document.querySelector("html");
 			element.scrollTop = element.scrollHeight;

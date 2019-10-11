@@ -66,6 +66,24 @@ a {
       white-space: -pre-wrap;
       white-space: -o-pre-wrap;
       word-wrap: break-word; }
+@keyframes u_glow {
+  from {
+    background-color: #e6ffbf; }
+  to {
+    background-color: white; } }
+  .chat_box .users_msg {
+    animation-name: u_glow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; }
+@keyframes not_u_glow {
+  from {
+    background-color: #ffccbf; }
+  to {
+    background-color: white; } }
+  .chat_box .not_users_msg {
+    animation-name: not_u_glow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; }
 
 .form_inputs {
   display: block;
@@ -183,5 +201,3 @@ a {
       width: 13%; }
     .form_inputs h6 {
       color: white; } }
-
-/*# sourceMappingURL=layout_styling.css.map */

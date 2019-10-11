@@ -84,6 +84,34 @@ a {
 			word-wrap: break-word;
 		}
 	}
+
+	@keyframes u_glow {
+		from {
+			background-color: rgb(230, 255, 191);
+		}
+		to {
+			background-color: white;
+		}
+	}
+	.users_msg {
+		animation-name: u_glow;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes not_u_glow {
+		from {
+			background-color: rgb(255, 204, 191);
+		}
+		to {
+			background-color: white;
+		}
+	}
+	.not_users_msg {
+		animation-name: not_u_glow;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+	}
 }
 
 .form_inputs {
