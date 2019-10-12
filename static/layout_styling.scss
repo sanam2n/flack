@@ -21,13 +21,10 @@ a {
 	padding-top: 1%;
 	padding-bottom: 5%;
 	padding-left: 1%;
-	padding-right: 0%;
-	margin-top: 0%;
 	margin-bottom: 10%;
-	margin-right: 0%;
-	margin-left: 0%;
 	width: 15%;
 	height: 100%;
+
 	.channel_btn_list {
 		width: 95%;
 		margin-top: 1%;
@@ -146,124 +143,77 @@ a {
 	}
 }
 
-@media screen and (max-width: 425px) {
-	
-	a {
-		font-family: 'Dekko';
-		font-size: 130%;
-	}
-	
-	.logo {
-		width: 3%;
-	}
-	
-	.app_title {
-		margin-left: -80%;
-	}
+@media screen and (max-width: 768px) {
 	
 	.av_channel {
-		position: fixed;
-		display: block;
-		background-color: black;
-		color: white;
-		padding-top: 1%;
-		padding-bottom: 5%;
-		padding-left: 1%;
-		padding-right: 0%;
-		margin-top: 0%;
-		margin-bottom: 10%;
-		margin-right: 0%;
-		margin-left: 0%;
-		width: 35%;
+		width: 27%;
 		height: 100%;
-		.channel_btn_list {
-			width: 95%;
-			margin-top: 1%;
-			border: none;
-			background-color: rgba(255, 166, 0, 0.673);
-			font-weight: bold;
-			font-family: 'Nova Flat';
-			font-size: 110%;
-		}
-	
-		.create_new_channel {
-			margin-bottom: 2%;
-		}
-	
-		#new_channel_name {
-			margin-bottom: 2%;
-		}
 	}
 	.chat_box {
-		margin-top: -1.5%;
-		margin-left: 32%;
+		margin-left: 28%;
 		margin-right: 0%;
-		margin-bottom: 28%;
-		
-		.card_box_chat {
-			margin-top: 1%;
-			margin-right: 0%;
-			margin-bottom: 1%;
-			background-color: rgb(255, 255, 255);
-		
-			label {
-				margin-left: 1%;
-				font-family: "Gruppo";
-				font-weight: bold;
-				font-size: 120%;
-			}
-		
-			.time-left {
-				margin-left: 1%;
-			}
-		
-			.card-text {
-				margin-left: 2%;
-				padding-right: 1%;
-				font-family: 'Didact Gothic';
-				font-weight: bold;
-			}
-			pre {
-				overflow-x: auto;
-				white-space: pre-wrap;
-				white-space: -moz-pre-wrap;
-				white-space: -pre-wrap;
-				white-space: -o-pre-wrap;
-				word-wrap: break-word;
-			}
-		}
+		margin-bottom: 10%;
 	}
 	
 	.form_inputs {
-		display: block;
 		padding-bottom: 1%;
-		padding-left: 35.5%;
-		background-color: black;
-		width: 100%;
-		bottom: 0%;
-		position: fixed;
-	
-		.input_fields {
-			padding-top: 0.5%;
-			width: 89%;
-			height: 50%;
-			#message_text {
-				width: 90%;
-			}
-		}
+		padding-left: 27%;
 	
 		#send_msg {
-			color: red;
-			position: absolute;
-			margin-left: 52%;
-			margin-top: -9%;
+			margin-left: 59%;
+			margin-top: -3.5%;
 			height: 35.5%;
 			width: 13%;
 		}
+	}
+
+	@media screen and (max-width: 540px) {
 	
-		h6 {
-			color: white;
+		.av_channel {
+			width: 35%;
+			height: 100%;
+		}
+		.chat_box {
+			margin-left: 32%;
+			margin-right: 0%;
+			margin-bottom: 28%;
+		}
+		
+		.form_inputs {
+			padding-bottom: 1%;
+			padding-left: 35.5%;
+		
+			#send_msg {
+				margin-left: 52%;
+				margin-top: -9%;
+				height: 35.5%;
+				width: 13%;
+			}
+		}
+	
+		@media screen and (max-width: 425px) {
+		
+			.av_channel {
+				width: 35%;
+				height: 100%;
+			}
+			.chat_box {
+				margin-left: 32%;
+				margin-right: 0%;
+				margin-bottom: 28%;
+			}
+			
+			.form_inputs {
+				padding-bottom: 1%;
+				padding-left: 35.5%;
+			
+				#send_msg {
+					margin-left: 52%;
+					margin-top: -9%;
+					height: 35.5%;
+					width: 13%;
+				}
+			}
 		}
 	}
-	
 }
